@@ -1,23 +1,33 @@
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="hero">
-        <h2>Next.js + Headless WordPress</h2>
-        <p>
-          This combination empowers seamless integration between Next.js and
-          WordPress, providing dynamic and efficient web experiences.
-        </p>
+        <h1 className="text-center">Автопрес БГ – вашият доверен източник на актуални новини и информация от света на автомобилите!</h1>
+        <h2>Защо да изберете Автопрес БГ?</h2>
+        <p><strong>Ние в Автопрес БГ сме посветени на това да ви предоставяме:</strong></p>
+        <ul>
+          <li>Последни новини от автомобилната индустрия – нови модели, иновации и технологии.</li>
+          <li>Тест драйвове и ревюта – обективни оценки за най-новите автомобили на пазара.</li>
+          <li>Съвети за поддръжка и ремонт – полезна информация за грижа за вашия автомобил.</li>
+          <li>Пазарни анализи и тенденции – разберете какво движи света на автомобилите днес.</li>
+        </ul>
+        <h2>Какво ще намерите при нас?</h2>
+        <p><strong>На страниците на Автопрес БГ ще откриете:</strong></p>
+        <ul>
+          <li>Статии за най-новите автомобили и концепти.</li>
+          <li>Сравнения между различни модели, за да направите информиран избор.</li>
+          <li>Полезни ресурси за любителите на електрическите и хибридните автомобили.</li>
+          <li>Специализирана информация за автомобилния спорт.</li>
+        </ul>
+        <p><strong>Останете винаги информирани</strong></p> 
+        <p>Абонирайте се за нашия бюлетин и следете Автопрес БГ в социалните мрежи, за да не пропуснете нищо важно. Ние сме тук, за да направим света на автомобилите по-достъпен и разбираем за всеки!</p>
+        <h3>Автопрес БГ – вашето място за всичко свързано с автомобили</h3>  
+        <p>Независимо дали сте автомобилен ентусиаст, търсите ново возило или просто искате да сте в крак с последните тенденции, Автопрес БГ е тук, за да ви помогне.</p>
+        <p>Посетете ни днес и се потопете в света на автомобилите!</p>  
         <Link href="/blog" className="btn">
-          Read Blog Posts
+          Публикации
         </Link>
       </div>
     </section>

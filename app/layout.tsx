@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/styles/main.scss";
 import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
@@ -51,11 +52,12 @@ export default function RootLayout({
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
+                href="https://powweb.bg/"
+                title="powweb.bg"
+                target="_blank"
               >
                 <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
+                <p className="text-primary">Powweb.bg</p>
               </Link>
             </footer>
           </div>

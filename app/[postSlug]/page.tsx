@@ -1,5 +1,6 @@
  
-import { blogCard } from "@/app/lib/interface";
+import PostCatMenu from "@/components/PostCatMenu";
+import { blogCard } from "@/lib/interface";
 import { getPostBySlug, getPosts } from "@/lib/service";
 
 import Image from "next/image";
@@ -32,15 +33,14 @@ export async function generateStaticParams() {
 // 	return post;
 // }
 
-const Page = async ( {params}: {params: {postSlug: string}} ) => {
+const Page = async ( {params}: {params: Promise<{postSlug: string}>} ) => {
+	const { postSlug } = await params;
+	// console.log("Params")
+	// console.log(params)
 
-	console.log("Params")
-	console.log(params)
-
-	const post: blogCard  = await getPostBySlug(params.postSlug);
-
-    console.log('Post2')
-    console.log(post)
+	const post: blogCard  = await getPostBySlug(postSlug);
+    // console.log('Post2')
+    // console.log(post)
 
 	// const postContent = post.content
 	// console.log("postContent")
@@ -57,6 +57,7 @@ const Page = async ( {params}: {params: {postSlug: string}} ) => {
 
 	return (
 		<div className="single-blog-page">
+            <PostCatMenu />
 			<h1 className="post-page-title my-[50px] uppercase tracking-widest text-[1.5rem] text-center text-blue-100">{post.title}</h1>
 			<Image 
 				src={post.featuredImage.node.sourceUrl} 

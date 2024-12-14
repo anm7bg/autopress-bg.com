@@ -49,6 +49,78 @@ export async function getPosts() {
   return data?.posts?.nodes;
 }
 
+export async function getZaAvtomobilaPosts() {
+  const data = await fetchAPI(
+    `query FetchPosts {
+      category(id: "dGVybToyMQ==") {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            slug
+            title
+            content
+          }
+        }
+      }
+    }`,
+  );
+
+  return data?.category?.posts?.nodes;
+}
+
+export async function getMotornoMasloPosts() {
+  const data = await fetchAPI(
+    `query FetchPosts {
+      category(id: "dGVybToxNA==") {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            slug
+            title
+            content
+          }
+        }
+      }
+    }`,
+  );
+
+  return data?.category?.posts?.nodes;
+}
+
+export async function getTuningNoviniPosts() {
+  const data = await fetchAPI(
+    `query FetchPosts {
+      category(id: "dGVybToxNA==") {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            slug
+            title
+            content
+          }
+        }
+      }
+    }`,
+  );
+
+  return data?.category?.posts?.nodes;
+}
+
 export async function getPostBySlug(postSlug: string) {
   const data = await fetchAPI(
     `query GetPost($id: ID = "") {
